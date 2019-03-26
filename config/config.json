@@ -1,0 +1,91 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "department-user-profile-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/departmentUserProfile/DepartmentUserProfileWebPart.js",
+          "manifest": "./src/webparts/departmentUserProfile/DepartmentUserProfileWebPart.manifest.json"
+        }
+      ]
+    },
+    "department-announcement-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/departmentAnnouncement/DepartmentAnnouncementWebPart.js",
+          "manifest": "./src/webparts/departmentAnnouncement/DepartmentAnnouncementWebPart.manifest.json"
+        }
+      ]
+    },
+    "department-tiles-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/departmentTiles/DepartmentTilesWebPart.js",
+          "manifest": "./src/webparts/departmentTiles/DepartmentTilesWebPart.manifest.json"
+        }
+      ]
+    },
+    "department-media-gallery-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/departmentMediaGallery/DepartmentMediaGalleryWebPart.js",
+          "manifest": "./src/webparts/departmentMediaGallery/DepartmentMediaGalleryWebPart.manifest.json"
+        }
+      ]
+    },
+    "department-quick-launch-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/departmentQuickLaunch/DepartmentQuickLaunchWebPart.js",
+          "manifest": "./src/webparts/departmentQuickLaunch/DepartmentQuickLaunchWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "https://code.jquery.com/jquery-1.7.0.min.js",
+      "globalName": "jQuery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jplist": {
+      "path": "./jplist/1.2.0/jplist.js",
+      "globalName": "jplist"
+    },
+    "jplist-core": {
+      "path": "./src/ExternalRef/js/jplist-core.js",
+      "globalName": "jplist-core",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "jplist-pagination": {
+      "path": "./src/ExternalRef/js/jplist-pagination.js",
+      "globalName": "jplist-pagination",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "slick": {
+      "path": "./src/ExternalRef/js/slick.js",
+      "globalName": "slick",
+      "globalDependencies": [
+        "jquery"
+      ]
+    }
+  },
+  "localizedResources": {
+    "DepartmentUserProfileWebPartStrings": "lib/webparts/departmentUserProfile/loc/{locale}.js",
+    "DepartmentAnnouncementWebPartStrings": "lib/webparts/departmentAnnouncement/loc/{locale}.js",
+    "DepartmentTilesWebPartStrings": "lib/webparts/departmentTiles/loc/{locale}.js",
+    "DepartmentMediaGalleryWebPartStrings": "lib/webparts/departmentMediaGallery/loc/{locale}.js",
+    "DepartmentQuickLaunchWebPartStrings": "lib/webparts/departmentQuickLaunch/loc/{locale}.js"
+  }
+}
